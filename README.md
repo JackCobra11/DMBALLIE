@@ -6,8 +6,13 @@
 ## About
 DenseNet-based Multi-Branch Low Light Image Enhancement with frontend (Tkinter & Flask)
 
-Results
+
+
+## Results
+
 ![](figure/example.png)
+
+
 
 To be continued
 
