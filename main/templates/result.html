@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% for img_str in output_paths %}
+        <div class="result-image">
+            <!--<img src="{{ path }}" alt="{{ path }}">-->
+            <img src="data:image/png;base64,{{img_str}}" alt="" height="500"/>
+        </div>
+    {% endfor %}
+</body>
+</html>

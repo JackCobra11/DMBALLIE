@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Image Super-Resolution Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Image Super-Resolution Demo</h1>
+    <form action="/test" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="input_folder">Input folder:</label>
+        <input type="text" class="form-control" id="input_folder" name="input_folder" required>
+      </div>
+      <div class="form-group">
+        <label for="result_folder">Result folder:</label>
+        <input type="text" class="form-control" id="result_folder" name="result_folder" required>
+      </div>
+      <div class="form-group">
+        <label for="model">Model:</label>
+        <select class="form-control" id="model" name="model">
+          <option value="100_dark_base_rw">100_dark_base_rw</option>
+          <option value="100_dark_base_rw">100_dark_base_rw</option>
+          <option value="100_dark_base_rw">100_dark_base_rw</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="lowpercent">Low Percentile:</label>
+        <input type="range" class="form-control-range" id="lowpercent" name="lowpercent" min="0" max="15" step="1" value="0">
+      </div>
+      <div class="form-group">
+        <label for="highpercent">High Percentile:</label>
+        <input type="range" class="form-control-range" id="highpercent" name="highpercent" min="85" max="100" step="1" value="100">
+      </div>
+      <div class="form-group">
+        <label for="maxrange">Max Range:</label>
+        <input type="range" class="form-control-range" id="maxrange" name="maxrange" min="0" max="10" step="1" value="10">
+      </div>
+      <div class="form-group">
+        <label for="gamma">Gamma:</label>
+        <input type="range" class="form-control-range" id="gamma" name="gamma" min="6" max="10" step="1" value="10">
+      </div>
+      <div class="form-group form-check">
+        <input type="hidden" name="com" value="0">
+        <input type="checkbox" class="form-check-input" id="com" name="com" value="1">
+        <label class="form-check-label" for="com">Comparison mode</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!--<div class="result">
+      <h2>Result</h2>
+      <img id="output_image" src="" alt="Output image">
+    </div>-->
+    </form>
+  </body>
+</html>
