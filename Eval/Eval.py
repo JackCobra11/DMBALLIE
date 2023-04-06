@@ -25,8 +25,8 @@ def eval(arg):
         img1=io.imread(im1_path,as_gray=True)
         img2=io.imread(im2_path,as_gray=True)
         
-        im1=cv2.imread(im1)
-        im2=cv2.imread(im2)
+        im1=cv2.imread(im1_path)
+        im2=cv2.imread(im2_path)
         psnr1=compare_psnr(im1,im2)
         psnr_result.append(psnr1)
 
