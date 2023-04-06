@@ -12,7 +12,7 @@ import argparse
 def eval(arg):
     origin_folder = arg.origin
     path = glob(origin_folder+'/*.*')
-    input_folder = arg.origin
+    input_folder = arg.input
     path2 = glob(input_folder+'/*.*')
     psnr_result = []
     ssim_result = []
